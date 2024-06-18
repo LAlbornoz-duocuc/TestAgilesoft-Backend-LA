@@ -1,4 +1,5 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using Infraestructure.Interfaces.Auth;
+using Microsoft.IdentityModel.Tokens;
 using Models.DTO.Api.Auth;
 using Models.DTO.Infraestructure;
 using System;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Infraestructure.Services.Auth
 {
-    public class TokenJWTService
+    public class TokenJWTService : ITokenJWT
     {
         private static readonly string SecKey = "61M4dXz96vXuvqoBbwHKiRRXXghZ94pn";
         public TokenJWTService() { }
