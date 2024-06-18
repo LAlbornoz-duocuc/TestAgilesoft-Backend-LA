@@ -11,9 +11,5 @@ namespace Domain.Specifications
 {
     public class TareasGeneralesSpecifications : Specification<TareasGenerales>
     {
-        public TareasGeneralesSpecifications(string UserName)
-        {
-            Query.Where(x => x.Username == UserName);
-        }
     }
 }

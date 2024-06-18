@@ -1429,6 +1429,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "Ardalis.Specification": "8.0.0",
           "Models": "1.0.0"
         },
         "compile": {
@@ -3799,11 +3800,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Trabajo\\Agilesoft\\TestAgilesoft-BackEnd\\src\\TestApi-Agilesoft\\TestApi-Agilesoft.csproj",
+      "projectUniqueName": "F:\\Trabajo\\Agilesoft\\TestAgilesoft-Backend-LA\\src\\TestApi-Agilesoft\\TestApi-Agilesoft.csproj",
       "projectName": "TestApi-Agilesoft",
-      "projectPath": "F:\\Trabajo\\Agilesoft\\TestAgilesoft-BackEnd\\src\\TestApi-Agilesoft\\TestApi-Agilesoft.csproj",
+      "projectPath": "F:\\Trabajo\\Agilesoft\\TestAgilesoft-Backend-LA\\src\\TestApi-Agilesoft\\TestApi-Agilesoft.csproj",
       "packagesPath": "C:\\Users\\Luis\\.nuget\\packages\\",
-      "outputPath": "F:\\Trabajo\\Agilesoft\\TestAgilesoft-BackEnd\\src\\TestApi-Agilesoft\\obj\\",
+      "outputPath": "F:\\Trabajo\\Agilesoft\\TestAgilesoft-Backend-LA\\src\\TestApi-Agilesoft\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Luis\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3820,8 +3821,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "F:\\Trabajo\\Agilesoft\\TestAgilesoft-BackEnd\\src\\Infraestructure\\Infraestructure.csproj": {
-              "projectPath": "F:\\Trabajo\\Agilesoft\\TestAgilesoft-BackEnd\\src\\Infraestructure\\Infraestructure.csproj"
+            "F:\\Trabajo\\Agilesoft\\TestAgilesoft-Backend-LA\\src\\Infraestructure\\Infraestructure.csproj": {
+              "projectPath": "F:\\Trabajo\\Agilesoft\\TestAgilesoft-Backend-LA\\src\\Infraestructure\\Infraestructure.csproj"
             }
           }
         }

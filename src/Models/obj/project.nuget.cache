@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qJJu6YT49k2CQqfh0s5Mtvy9GsfCqTImyfSUfS4jdrSSvOd5Ph5b5I8IcKEvKo+4Xk7SM1yXtN3DJM8N/579YA==",
+  "dgSpecHash": "oO/UAefp7iDVYCnjeobbKYkaaRHFp8BhdEcNWOv2zj2ZzSENXlcL2Nx2nyUMTjbySUW1G+SOc0rIRyr5Auj/vw==",
   "success": true,
-  "projectFilePath": "F:\\Trabajo\\Agilesoft\\TestAgilesoft-BackEnd\\src\\Models\\Models.csproj",
+  "projectFilePath": "F:\\Trabajo\\Agilesoft\\TestAgilesoft-Backend-LA\\src\\Models\\Models.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -743,6 +743,7 @@
       },
       "Domain/1.0.0": {
         "dependencies": {
+          "Ardalis.Specification": "8.0.0",
           "Models": "1.0.0"
         },
         "runtime": {

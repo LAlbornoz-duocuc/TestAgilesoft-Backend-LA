@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Trabajo\\Agilesoft\\TestAgilesoft-BackEnd\\src\\Domain\\Domain.csproj": {}
+    "F:\\Trabajo\\Agilesoft\\TestAgilesoft-Backend-LA\\src\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "F:\\Trabajo\\Agilesoft\\TestAgilesoft-BackEnd\\src\\Domain\\Domain.csproj": {
+    "F:\\Trabajo\\Agilesoft\\TestAgilesoft-Backend-LA\\src\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Trabajo\\Agilesoft\\TestAgilesoft-BackEnd\\src\\Domain\\Domain.csproj",
+        "projectUniqueName": "F:\\Trabajo\\Agilesoft\\TestAgilesoft-Backend-LA\\src\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "F:\\Trabajo\\Agilesoft\\TestAgilesoft-BackEnd\\src\\Domain\\Domain.csproj",
+        "projectPath": "F:\\Trabajo\\Agilesoft\\TestAgilesoft-Backend-LA\\src\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Luis\\.nuget\\packages\\",
-        "outputPath": "F:\\Trabajo\\Agilesoft\\TestAgilesoft-BackEnd\\src\\Domain\\obj\\",
+        "outputPath": "F:\\Trabajo\\Agilesoft\\TestAgilesoft-Backend-LA\\src\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Luis\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "F:\\Trabajo\\Agilesoft\\TestAgilesoft-BackEnd\\src\\Models\\Models.csproj": {
-                "projectPath": "F:\\Trabajo\\Agilesoft\\TestAgilesoft-BackEnd\\src\\Models\\Models.csproj"
+              "F:\\Trabajo\\Agilesoft\\TestAgilesoft-Backend-LA\\src\\Models\\Models.csproj": {
+                "projectPath": "F:\\Trabajo\\Agilesoft\\TestAgilesoft-Backend-LA\\src\\Models\\Models.csproj"
               }
             }
           }
@@ -69,14 +69,14 @@
         }
       }
     },
-    "F:\\Trabajo\\Agilesoft\\TestAgilesoft-BackEnd\\src\\Models\\Models.csproj": {
+    "F:\\Trabajo\\Agilesoft\\TestAgilesoft-Backend-LA\\src\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Trabajo\\Agilesoft\\TestAgilesoft-BackEnd\\src\\Models\\Models.csproj",
+        "projectUniqueName": "F:\\Trabajo\\Agilesoft\\TestAgilesoft-Backend-LA\\src\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "F:\\Trabajo\\Agilesoft\\TestAgilesoft-BackEnd\\src\\Models\\Models.csproj",
+        "projectPath": "F:\\Trabajo\\Agilesoft\\TestAgilesoft-Backend-LA\\src\\Models\\Models.csproj",
         "packagesPath": "C:\\Users\\Luis\\.nuget\\packages\\",
-        "outputPath": "F:\\Trabajo\\Agilesoft\\TestAgilesoft-BackEnd\\src\\Models\\obj\\",
+        "outputPath": "F:\\Trabajo\\Agilesoft\\TestAgilesoft-Backend-LA\\src\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Luis\\AppData\\Roaming\\NuGet\\NuGet.Config",
