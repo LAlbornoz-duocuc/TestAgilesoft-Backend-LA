@@ -14,5 +14,10 @@ namespace Domain.Specifications
         {
             Query.Where(x => x.UsuarioId == UsuarioId);
         }
+
+        public TareasUsuarioSpecifications(int UsuarioId, int TareaId)
+        {
+            Query.Where(x => x.UsuarioId == UsuarioId && x.TareasId == TareaId);
+        }
     }
 }

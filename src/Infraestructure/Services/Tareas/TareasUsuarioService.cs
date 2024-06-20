@@ -72,5 +72,21 @@ namespace Infraestructure.Services.Tareas
             }
             
         }
+
+        public async Task<TareasUsuario> GetTareasByUserIdAndTaskId(TareasUsuarioSpecifications tareasUsuarioSpecifications)
+        {
+            try
+            {
+                var repo = _Repository.GetRepository<TareasUsuario>();
+                var result = await repo.FirstOrDefaultAsync(tareasUsuarioSpecifications).ConfigureAwait(false);
+
+                return result;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

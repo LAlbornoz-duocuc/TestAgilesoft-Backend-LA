@@ -19,11 +19,11 @@ namespace Infraestructure.Models.Config
 
             builder.Property(e => e.Nombre).HasMaxLength(50).HasColumnName("Nombre");
 
-            builder.Property(e => e.Descripción).HasMaxLength(250).HasColumnName("Descripción");
+            builder.Property(e => e.Descripcion).HasMaxLength(250).HasColumnName("Descripcion");
 
             builder.Property(e => e.Estado).HasColumnType("int").HasColumnName("Estado");
 
-            builder.Property(x => x.FechaCreación).HasColumnType("datetime").HasColumnName("FechaCreación");
+            builder.Property(x => x.FechaCreacion).HasColumnType("datetime").HasColumnName("FechaCreacion");
 
             builder.Property(x => x.FechaUltimaActualizacion).HasColumnType("datetime").HasColumnName("FechaUltimaActualizacion");
 

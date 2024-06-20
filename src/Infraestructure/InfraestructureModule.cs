@@ -1,8 +1,10 @@
 ﻿using Autofac;
+using Domain.Interfaces;
 using Domain.Interfaces.Services.Auth;
 using Domain.Interfaces.Services.TareasUsuarios;
 using Domain.Interfaces.Services.Usuarios;
 using Infraestructure.Interfaces.Auth;
+using Infraestructure.Models;
 using Infraestructure.Services.Auth;
 using Infraestructure.Services.Tareas;
 using Infraestructure.Services.Usuarios;
@@ -46,6 +48,13 @@ namespace Infraestructure
             builder.RegisterType<EncriptarPbkdf2>()
                 .As<IEncriptar>()
                 .InstancePerLifetimeScope();
+
+            builder.RegisterType<UnitOfWork>()
+                .As<IUnitOfWork>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterGeneric(typeof(RepositoryImplements<>))
+                .As(typeof(IGenericRepository<>));
 
             builder.RegisterType<TokenJWTService>()
                 .As<ITokenJWT>()

@@ -11,5 +11,9 @@ namespace Domain.Specifications
 {
     public class TareasGeneralesSpecifications : Specification<TareasGenerales>
     {
+        public TareasGeneralesSpecifications(List<int> TareasGeneralesIds)
+        {
+            Query.Where(x => TareasGeneralesIds.Contains(x.Id));
+        }
     }
 }

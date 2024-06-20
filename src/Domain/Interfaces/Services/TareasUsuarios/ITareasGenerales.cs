@@ -11,7 +11,8 @@ namespace Domain.Interfaces.Services.TareasUsuarios
     {
         public Task<int> AddTarea(TareasGenerales tareasGenerales);
         public Task<int> UpdateTarea(TareasGenerales tareasGenerales);
-        public Task<int> CambiarEstadoTarea(int Estado, int TareasGeneralesId);
-        Task<List<TareasGenerales>> GetTareasGenerales(List<int> ListaTareasGeneralesIds);
+        public Task<List<TareasGenerales>> GetTareasGeneralesByIds(List<int> ListaTareasGeneralesIds);
+        public Task<List<TareasGenerales>> GetTareasGenerales();
+        public Task<TareasGenerales> GetByTareasGeneralesId(int TareasGeneralesId);
     }
 }

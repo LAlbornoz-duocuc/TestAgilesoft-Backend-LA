@@ -11,5 +11,6 @@ namespace Domain.Interfaces.Services.Usuarios
     {
         public Task<int> AddUsuario(Usuario usuario);
         public Task<Usuario> GetUsuarioByUsername(string username);
+        public Task<Usuario> GetUsuarioById(int id);
     }
 }

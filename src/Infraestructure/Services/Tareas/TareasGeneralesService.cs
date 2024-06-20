@@ -2,6 +2,7 @@
 using Domain.Interfaces;
 using Domain.Interfaces.Services.TareasUsuarios;
 using Domain.Interfaces.Services.Usuarios;
+using Domain.Specifications;
 using Infraestructure.Interfaces.Auth;
 using System;
 using System.Collections.Generic;
@@ -39,19 +40,75 @@ namespace Infraestructure.Services.Tareas
             }
         }
 
-        public Task<int> CambiarEstadoTarea(int Estado, int TareasGeneralesId)
+        public async Task<TareasGenerales> GetByTareasGeneralesId(int TareasGeneralesId)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var repo = _Repository.GetRepository<TareasGenerales>();
+
+
+                var resultado = await repo.GetByIdAsync(TareasGeneralesId).ConfigureAwait(false);
+
+
+                return resultado;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
-        public Task<List<TareasGenerales>> GetTareasGenerales(List<int> ListaTareasGeneralesIds)
+        public async Task<List<TareasGenerales>> GetTareasGenerales()
         {
-            throw new NotImplementedException();
+            try
+            {
+                var repo = _Repository.GetRepository<TareasGenerales>();
+                var list = await repo.ListAllAsync().ConfigureAwait(false);
+
+                return list?.ToList() ?? new List<TareasGenerales>();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
-        public Task<int> UpdateTarea(TareasGenerales tareasGenerales)
+        public async Task<List<TareasGenerales>> GetTareasGeneralesByIds(List<int> ListaTareasGeneralesIds)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var repo = _Repository.GetRepository<TareasGenerales>();
+                var spec = new TareasGeneralesSpecifications(ListaTareasGeneralesIds);
+                var list = await repo.ListAsync(spec).ConfigureAwait(false);
+
+                return list?.ToList() ?? new List<TareasGenerales>();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public async Task<int> UpdateTarea(TareasGenerales tareasGenerales)
+        {
+            try
+            {
+                var repo = _Repository.GetRepository<TareasGenerales>();
+
+
+                await repo.UpdateAsync(tareasGenerales).ConfigureAwait(false);
+                int resultado = await _Repository.CommitAsync().ConfigureAwait(false);
+
+                return resultado;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

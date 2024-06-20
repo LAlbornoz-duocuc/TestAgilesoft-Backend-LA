@@ -13,7 +13,7 @@ namespace Infraestructure.Models.Config
     {
         public void Configure(EntityTypeBuilder<Usuario> builder)
         {
-            builder.ToTable("Usuario", "Parametro");
+            builder.ToTable("Usuario", "dbo");
 
             builder.Property(e => e.Id).HasColumnName("Id");
 

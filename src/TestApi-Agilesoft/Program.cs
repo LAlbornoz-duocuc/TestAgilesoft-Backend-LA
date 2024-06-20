@@ -5,6 +5,7 @@ using Infraestructure.Models.DB;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Models.DTO.Api.Auth;
 using System.Text;
 
 
@@ -23,13 +24,13 @@ builder.Host.ConfigureContainer<ContainerBuilder>(builderAutofac => builderAutof
 
 
 // Obtiene los detalles de la cadena de conexión desde las variables de entorno
-var dbServer = builder.Configuration["DB_SERVER"] ?? Environment.GetEnvironmentVariable("DB_SERVER");
-var dbDatabase = builder.Configuration["DB_DATABASE"] ?? Environment.GetEnvironmentVariable("DB_DATABASE");
+var dbServer = builder.Configuration["DB_SERVER1"] ?? Environment.GetEnvironmentVariable("DB_SERVER1");
+var dbDatabase = builder.Configuration["DB_DATABASE1"] ?? Environment.GetEnvironmentVariable("DB_DATABASE1");
 var dbUser = builder.Configuration["DB_USER"] ?? Environment.GetEnvironmentVariable("DB_USER");
-var dbPassword = builder.Configuration["DB_PASSWORD"] ?? Environment.GetEnvironmentVariable("DB_PASSWORD");
+var dbPassword = builder.Configuration["DB_PASSWORD1"] ?? Environment.GetEnvironmentVariable("DB_PASSWORD1");
 
 // Construye la cadena de conexión
-var connectionString = $"Server={dbServer};Database={dbDatabase};User Id={dbUser};Password={dbPassword}";
+var connectionString = $"Server={dbServer};Database={dbDatabase};User Id={dbUser};Password={dbPassword};TrustServerCertificate=True;";
 
 /*se define de donde se obtiene la cadena de conexión de la base de datos*/
 builder.Services.AddDbContext<Context>(
@@ -38,8 +39,9 @@ builder.Services.AddDbContext<Context>(
         options.UseSqlServer(connectionString);
     });
 
+// Obtiene valor de la variable para las politicas CORS desde las variables de entorno
+var CorsPolicy = builder.Configuration["VAR_CORS"] ?? Environment.GetEnvironmentVariable("VAR_CORS");
 
-var CorsPolicy = "CorsAgilesoft";
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(CorsPolicy, ApplicationBuilder =>
@@ -54,6 +56,13 @@ builder.Services.AddCors(options =>
     });
 });
 
+//Obtiene la llave para la creación de los tokens desde las variables de entorno
+var JWTKey = builder.Configuration["JWTKey"] ?? Environment.GetEnvironmentVariable("JWTKey");
+
+builder.Services.Configure<JWTKeySettings>(opts =>
+{
+    opts.JWTKey = JWTKey;
+});
 
 
 

@@ -29,6 +29,7 @@ namespace Infraestructure.Services.Usuarios
                 var repo = _Repository.GetRepository<Usuario>();
 
                 _encriptar.Encriptar(usuario.Password);
+                usuario.Password = _encriptar.ObtenerHash();
 
 
                 await repo.AddAsync(usuario).ConfigureAwait(false);
@@ -42,6 +43,22 @@ namespace Infraestructure.Services.Usuarios
                 throw;
             }
             
+        }
+
+        public async Task<Usuario> GetUsuarioById(int id)
+        {
+            try
+            {
+                var repo = _Repository.GetRepository<Usuario>();
+                var resultado = await repo.GetByIdAsync(id).ConfigureAwait(false);
+
+                return resultado;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public async Task<Usuario> GetUsuarioByUsername(string username)

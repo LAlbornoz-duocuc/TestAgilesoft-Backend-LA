@@ -13,6 +13,7 @@ namespace Domain.Interfaces.Services.TareasUsuarios
         public Task<int> AddTareaUsuario(TareasUsuario tareasUsuario);
         public Task<int> DeleteTareaUsuario(TareasUsuario tareasUsuario);
         public Task<List<TareasUsuario>> GetTareasByUserId(TareasUsuarioSpecifications tareasUsuarioSpecifications);
-        
+        public Task<TareasUsuario> GetTareasByUserIdAndTaskId(TareasUsuarioSpecifications tareasUsuarioSpecifications);
+
     }
 }

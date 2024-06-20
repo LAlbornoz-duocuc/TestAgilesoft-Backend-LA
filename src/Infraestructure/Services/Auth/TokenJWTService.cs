@@ -1,4 +1,5 @@
 ﻿using Infraestructure.Interfaces.Auth;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Models.DTO.Api.Auth;
 using Models.DTO.Infraestructure;
@@ -14,8 +15,14 @@ namespace Infraestructure.Services.Auth
 {
     public class TokenJWTService : ITokenJWT
     {
-        private static readonly string SecKey = "61M4dXz96vXuvqoBbwHKiRRXXghZ94pn";
-        public TokenJWTService() { }
+        private readonly JWTKeySettings _jwtKeySettings;
+
+        private readonly string SecKey;
+        public TokenJWTService(IOptions<JWTKeySettings> settings) 
+        {
+            _jwtKeySettings = settings.Value;
+            SecKey = _jwtKeySettings.JWTKey;
+        }
 
         public GenerateJWT GenerateToken(UsuarioForJWT Usuario)
         {
